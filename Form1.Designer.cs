@@ -54,7 +54,6 @@ namespace t2_ssup_controle_elevador
             this.d2 = new System.Windows.Forms.Button();
             this.up3 = new System.Windows.Forms.Button();
             this.d3 = new System.Windows.Forms.Button();
-            this.up4 = new System.Windows.Forms.Button();
             this.d4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -212,14 +211,14 @@ namespace t2_ssup_controle_elevador
             // 
             this.status.BackColor = System.Drawing.SystemColors.Desktop;
             this.status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.status.Font = new System.Drawing.Font("Segoe UI", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.status.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.status.ForeColor = System.Drawing.SystemColors.Highlight;
             this.status.Location = new System.Drawing.Point(260, 65);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(52, 56);
             this.status.TabIndex = 21;
-            this.status.Text = "0";
             this.status.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.status.Click += new System.EventHandler(this.status_Click);
             // 
             // textBox4
             // 
@@ -350,20 +349,10 @@ namespace t2_ssup_controle_elevador
             this.d3.Text = "Down";
             this.d3.UseVisualStyleBackColor = true;
             // 
-            // up4
-            // 
-            this.up4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.up4.Location = new System.Drawing.Point(504, 128);
-            this.up4.Name = "up4";
-            this.up4.Size = new System.Drawing.Size(55, 23);
-            this.up4.TabIndex = 33;
-            this.up4.Text = "Up";
-            this.up4.UseVisualStyleBackColor = true;
-            // 
             // d4
             // 
             this.d4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.d4.Location = new System.Drawing.Point(504, 157);
+            this.d4.Location = new System.Drawing.Point(504, 126);
             this.d4.Name = "d4";
             this.d4.Size = new System.Drawing.Size(55, 23);
             this.d4.TabIndex = 34;
@@ -376,7 +365,6 @@ namespace t2_ssup_controle_elevador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 191);
             this.Controls.Add(this.d4);
-            this.Controls.Add(this.up4);
             this.Controls.Add(this.d3);
             this.Controls.Add(this.up3);
             this.Controls.Add(this.d2);
@@ -404,6 +392,7 @@ namespace t2_ssup_controle_elevador
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,7 +425,6 @@ namespace t2_ssup_controle_elevador
         private System.Windows.Forms.Button d2;
         private System.Windows.Forms.Button up3;
         private System.Windows.Forms.Button d3;
-        private System.Windows.Forms.Button up4;
         private System.Windows.Forms.Button d4;
     }
 }
