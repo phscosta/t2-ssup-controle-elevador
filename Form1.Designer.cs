@@ -30,27 +30,32 @@ namespace t2_ssup_controle_elevador
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttont = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonEm = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.checkBox_ma = new System.Windows.Forms.CheckBox();
+            this.checkBox_at = new System.Windows.Forms.CheckBox();
+            this.up1 = new System.Windows.Forms.Button();
+            this.d1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.status = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.upT = new System.Windows.Forms.Button();
+            this.up2 = new System.Windows.Forms.Button();
+            this.d2 = new System.Windows.Forms.Button();
+            this.up3 = new System.Windows.Forms.Button();
+            this.d3 = new System.Windows.Forms.Button();
+            this.up4 = new System.Windows.Forms.Button();
+            this.d4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -59,201 +64,137 @@ namespace t2_ssup_controle_elevador
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(12, 8);
+            this.textBox1.Location = new System.Drawing.Point(12, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(234, 31);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Painel de Navegação Interno";
             // 
+            // buttont
+            // 
+            this.buttont.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttont.Location = new System.Drawing.Point(42, 56);
+            this.buttont.Name = "buttont";
+            this.buttont.Size = new System.Drawing.Size(55, 54);
+            this.buttont.TabIndex = 1;
+            this.buttont.Text = "T";
+            this.buttont.UseVisualStyleBackColor = true;
+            this.buttont.Click += new System.EventHandler(this.button1_Click);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(42, 56);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(103, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 54);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.TabIndex = 2;
+            this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button2_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(103, 56);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(164, 56);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(55, 54);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
+            this.button2.TabIndex = 3;
+            this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button3_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(164, 56);
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(42, 116);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(55, 54);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
+            this.button3.TabIndex = 4;
+            this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.button4_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(42, 116);
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.Location = new System.Drawing.Point(103, 116);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(55, 54);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
+            this.button4.TabIndex = 5;
+            this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button5
+            // buttonEm
             // 
-            this.button5.Location = new System.Drawing.Point(103, 116);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(55, 54);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(164, 116);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(55, 54);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.buttonEm.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonEm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonEm.Location = new System.Drawing.Point(164, 116);
+            this.buttonEm.Name = "buttonEm";
+            this.buttonEm.Size = new System.Drawing.Size(55, 54);
+            this.buttonEm.TabIndex = 6;
+            this.buttonEm.Text = "EM";
+            this.buttonEm.UseVisualStyleBackColor = false;
+            this.buttonEm.Click += new System.EventHandler(this.button6_Click);
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.GrayText;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(267, 8);
+            this.textBox2.Location = new System.Drawing.Point(260, 10);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 31);
+            this.textBox2.Size = new System.Drawing.Size(112, 23);
             this.textBox2.TabIndex = 7;
             this.textBox2.Text = "Modo de Operação";
             // 
-            // checkBox1
+            // checkBox_ma
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkBox1.Location = new System.Drawing.Point(433, 11);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 24);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Manual";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox_ma.AutoSize = true;
+            this.checkBox_ma.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.checkBox_ma.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox_ma.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBox_ma.Location = new System.Drawing.Point(475, 11);
+            this.checkBox_ma.Name = "checkBox_ma";
+            this.checkBox_ma.Size = new System.Drawing.Size(66, 19);
+            this.checkBox_ma.TabIndex = 8;
+            this.checkBox_ma.Text = "Manual";
+            this.checkBox_ma.UseVisualStyleBackColor = false;
             // 
-            // checkBox2
+            // checkBox_at
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkBox2.Location = new System.Drawing.Point(529, 11);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(111, 24);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Automático";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.checkBox_at.AutoSize = true;
+            this.checkBox_at.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.checkBox_at.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox_at.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBox_at.Location = new System.Drawing.Point(378, 11);
+            this.checkBox_at.Name = "checkBox_at";
+            this.checkBox_at.Size = new System.Drawing.Size(91, 19);
+            this.checkBox_at.TabIndex = 9;
+            this.checkBox_at.Text = "Automático";
+            this.checkBox_at.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // up1
             // 
-            this.button7.Location = new System.Drawing.Point(402, 127);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(55, 23);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.up1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.up1.Location = new System.Drawing.Point(321, 128);
+            this.up1.Name = "up1";
+            this.up1.Size = new System.Drawing.Size(55, 23);
+            this.up1.TabIndex = 10;
+            this.up1.Text = "Up";
+            this.up1.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // d1
             // 
-            this.button8.Location = new System.Drawing.Point(402, 156);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(55, 23);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(463, 156);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(55, 23);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(463, 127);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(55, 23);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(524, 156);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(55, 23);
-            this.button11.TabIndex = 15;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(524, 127);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(55, 23);
-            this.button12.TabIndex = 14;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(341, 156);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(55, 23);
-            this.button13.TabIndex = 17;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(341, 127);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(55, 23);
-            this.button14.TabIndex = 16;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(585, 156);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(55, 23);
-            this.button15.TabIndex = 19;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(585, 127);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(55, 23);
-            this.button16.TabIndex = 18;
-            this.button16.Text = "button16";
-            this.button16.UseVisualStyleBackColor = true;
+            this.d1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.d1.Location = new System.Drawing.Point(321, 157);
+            this.d1.Name = "d1";
+            this.d1.Size = new System.Drawing.Size(55, 23);
+            this.d1.TabIndex = 11;
+            this.d1.Text = "Down";
+            this.d1.UseVisualStyleBackColor = true;
+            this.d1.Click += new System.EventHandler(this.button8_Click);
             // 
             // textBox3
             // 
@@ -261,51 +202,205 @@ namespace t2_ssup_controle_elevador
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(345, 68);
+            this.textBox3.Location = new System.Drawing.Point(321, 39);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(234, 31);
+            this.textBox3.Size = new System.Drawing.Size(238, 31);
             this.textBox3.TabIndex = 20;
             this.textBox3.Text = "Painel de Navegação Externo";
             // 
-            // label1
+            // status
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(267, 123);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 56);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.status.BackColor = System.Drawing.SystemColors.Desktop;
+            this.status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.status.Font = new System.Drawing.Font("Segoe UI", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.status.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.status.Location = new System.Drawing.Point(260, 65);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(52, 56);
+            this.status.TabIndex = 21;
+            this.status.Text = "0";
+            this.status.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.GrayText;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox4.Location = new System.Drawing.Point(260, 39);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(52, 23);
+            this.textBox4.TabIndex = 22;
+            this.textBox4.Text = "Status";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.GrayText;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox5.Location = new System.Drawing.Point(260, 128);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(55, 23);
+            this.textBox5.TabIndex = 23;
+            this.textBox5.Text = "Térreo";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.GrayText;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.textBox6.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox6.Location = new System.Drawing.Point(321, 99);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(55, 23);
+            this.textBox6.TabIndex = 24;
+            this.textBox6.Text = "1º Andar";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.GrayText;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.textBox7.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox7.Location = new System.Drawing.Point(382, 98);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(55, 23);
+            this.textBox7.TabIndex = 25;
+            this.textBox7.Text = "2º Andar";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.GrayText;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.textBox8.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox8.Location = new System.Drawing.Point(443, 98);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(55, 23);
+            this.textBox8.TabIndex = 26;
+            this.textBox8.Text = "3º Andar";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.SystemColors.GrayText;
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.textBox9.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox9.Location = new System.Drawing.Point(504, 98);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(55, 23);
+            this.textBox9.TabIndex = 27;
+            this.textBox9.Text = "4º Andar";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // upT
+            // 
+            this.upT.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.upT.Location = new System.Drawing.Point(260, 157);
+            this.upT.Name = "upT";
+            this.upT.Size = new System.Drawing.Size(55, 23);
+            this.upT.TabIndex = 28;
+            this.upT.Text = "Up";
+            this.upT.UseVisualStyleBackColor = true;
+            // 
+            // up2
+            // 
+            this.up2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.up2.Location = new System.Drawing.Point(382, 126);
+            this.up2.Name = "up2";
+            this.up2.Size = new System.Drawing.Size(55, 23);
+            this.up2.TabIndex = 29;
+            this.up2.Text = "Up";
+            this.up2.UseVisualStyleBackColor = true;
+            // 
+            // d2
+            // 
+            this.d2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.d2.Location = new System.Drawing.Point(382, 157);
+            this.d2.Name = "d2";
+            this.d2.Size = new System.Drawing.Size(55, 23);
+            this.d2.TabIndex = 30;
+            this.d2.Text = "Down";
+            this.d2.UseVisualStyleBackColor = true;
+            // 
+            // up3
+            // 
+            this.up3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.up3.Location = new System.Drawing.Point(443, 126);
+            this.up3.Name = "up3";
+            this.up3.Size = new System.Drawing.Size(55, 23);
+            this.up3.TabIndex = 31;
+            this.up3.Text = "Up";
+            this.up3.UseVisualStyleBackColor = true;
+            // 
+            // d3
+            // 
+            this.d3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.d3.Location = new System.Drawing.Point(443, 157);
+            this.d3.Name = "d3";
+            this.d3.Size = new System.Drawing.Size(55, 23);
+            this.d3.TabIndex = 32;
+            this.d3.Text = "Down";
+            this.d3.UseVisualStyleBackColor = true;
+            // 
+            // up4
+            // 
+            this.up4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.up4.Location = new System.Drawing.Point(504, 128);
+            this.up4.Name = "up4";
+            this.up4.Size = new System.Drawing.Size(55, 23);
+            this.up4.TabIndex = 33;
+            this.up4.Text = "Up";
+            this.up4.UseVisualStyleBackColor = true;
+            // 
+            // d4
+            // 
+            this.d4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.d4.Location = new System.Drawing.Point(504, 157);
+            this.d4.Name = "d4";
+            this.d4.Size = new System.Drawing.Size(55, 23);
+            this.d4.TabIndex = 34;
+            this.d4.Text = "Down";
+            this.d4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 191);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(566, 191);
+            this.Controls.Add(this.d4);
+            this.Controls.Add(this.up4);
+            this.Controls.Add(this.d3);
+            this.Controls.Add(this.up3);
+            this.Controls.Add(this.d2);
+            this.Controls.Add(this.up2);
+            this.Controls.Add(this.upT);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.status);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.d1);
+            this.Controls.Add(this.up1);
+            this.Controls.Add(this.checkBox_at);
+            this.Controls.Add(this.checkBox_ma);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonEm);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttont);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -317,27 +412,32 @@ namespace t2_ssup_controle_elevador
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttont;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonEm;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.CheckBox checkBox_ma;
+        private System.Windows.Forms.CheckBox checkBox_at;
+        private System.Windows.Forms.Button up1;
+        private System.Windows.Forms.Button d1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label status;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button upT;
+        private System.Windows.Forms.Button up2;
+        private System.Windows.Forms.Button d2;
+        private System.Windows.Forms.Button up3;
+        private System.Windows.Forms.Button d3;
+        private System.Windows.Forms.Button up4;
+        private System.Windows.Forms.Button d4;
     }
 }
 
