@@ -1,0 +1,17 @@
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\bin\Debug\netcoreapp3.1\t2-ssup-controle-elevador.exe
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\bin\Debug\netcoreapp3.1\t2-ssup-controle-elevador.deps.json
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\bin\Debug\netcoreapp3.1\t2-ssup-controle-elevador.runtimeconfig.json
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\bin\Debug\netcoreapp3.1\t2-ssup-controle-elevador.runtimeconfig.dev.json
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\bin\Debug\netcoreapp3.1\t2-ssup-controle-elevador.dll
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\bin\Debug\netcoreapp3.1\t2-ssup-controle-elevador.pdb
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.csproj.AssemblyReference.cache
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2_ssup_controle_elevador.Form1.resources
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2_ssup_controle_elevador.Properties.Resources.resources
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.csproj.GenerateResource.cache
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.AssemblyInfoInputs.cache
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.AssemblyInfo.cs
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.csproj.CoreCompileInputs.cache
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.dll
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.pdb
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.genruntimeconfig.cache
