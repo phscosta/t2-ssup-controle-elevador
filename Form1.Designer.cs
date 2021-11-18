@@ -183,6 +183,7 @@ namespace t2_ssup_controle_elevador
             this.up1.TabIndex = 10;
             this.up1.Text = "Up";
             this.up1.UseVisualStyleBackColor = true;
+            this.up1.Click += new System.EventHandler(this.up1_Click);
             // 
             // d1
             // 
@@ -308,6 +309,7 @@ namespace t2_ssup_controle_elevador
             this.upT.TabIndex = 28;
             this.upT.Text = "Up";
             this.upT.UseVisualStyleBackColor = true;
+            this.upT.Click += new System.EventHandler(this.upT_Click);
             // 
             // up2
             // 
@@ -318,6 +320,7 @@ namespace t2_ssup_controle_elevador
             this.up2.TabIndex = 29;
             this.up2.Text = "Up";
             this.up2.UseVisualStyleBackColor = true;
+            this.up2.Click += new System.EventHandler(this.up2_Click);
             // 
             // d2
             // 
@@ -328,6 +331,7 @@ namespace t2_ssup_controle_elevador
             this.d2.TabIndex = 30;
             this.d2.Text = "Down";
             this.d2.UseVisualStyleBackColor = true;
+            this.d2.Click += new System.EventHandler(this.d2_Click);
             // 
             // up3
             // 
@@ -338,6 +342,7 @@ namespace t2_ssup_controle_elevador
             this.up3.TabIndex = 31;
             this.up3.Text = "Up";
             this.up3.UseVisualStyleBackColor = true;
+            this.up3.Click += new System.EventHandler(this.up3_Click);
             // 
             // d3
             // 
@@ -348,6 +353,7 @@ namespace t2_ssup_controle_elevador
             this.d3.TabIndex = 32;
             this.d3.Text = "Down";
             this.d3.UseVisualStyleBackColor = true;
+            this.d3.Click += new System.EventHandler(this.d3_Click);
             // 
             // d4
             // 
@@ -358,6 +364,7 @@ namespace t2_ssup_controle_elevador
             this.d4.TabIndex = 34;
             this.d4.Text = "Down";
             this.d4.UseVisualStyleBackColor = true;
+            this.d4.Click += new System.EventHandler(this.d4_Click);
             // 
             // Form1
             // 
