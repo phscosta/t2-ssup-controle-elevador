@@ -55,6 +55,8 @@ namespace t2_ssup_controle_elevador
             this.up3 = new System.Windows.Forms.Button();
             this.d3 = new System.Windows.Forms.Button();
             this.d4 = new System.Windows.Forms.Button();
+            this.vmodo = new System.Windows.Forms.Label();
+            this.vexterno = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -63,16 +65,18 @@ namespace t2_ssup_controle_elevador
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(12, 9);
+            this.textBox1.Location = new System.Drawing.Point(12, 7);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 31);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(239, 31);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Painel de Navegação Interno";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttont
             // 
             this.buttont.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttont.Location = new System.Drawing.Point(42, 56);
+            this.buttont.Location = new System.Drawing.Point(42, 66);
             this.buttont.Name = "buttont";
             this.buttont.Size = new System.Drawing.Size(55, 54);
             this.buttont.TabIndex = 1;
@@ -83,7 +87,7 @@ namespace t2_ssup_controle_elevador
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(103, 56);
+            this.button1.Location = new System.Drawing.Point(103, 65);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 54);
             this.button1.TabIndex = 2;
@@ -94,7 +98,7 @@ namespace t2_ssup_controle_elevador
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(164, 56);
+            this.button2.Location = new System.Drawing.Point(164, 66);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(55, 54);
             this.button2.TabIndex = 3;
@@ -105,7 +109,7 @@ namespace t2_ssup_controle_elevador
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(42, 116);
+            this.button3.Location = new System.Drawing.Point(42, 126);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(55, 54);
             this.button3.TabIndex = 4;
@@ -116,7 +120,7 @@ namespace t2_ssup_controle_elevador
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(103, 116);
+            this.button4.Location = new System.Drawing.Point(103, 125);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(55, 54);
             this.button4.TabIndex = 5;
@@ -128,7 +132,7 @@ namespace t2_ssup_controle_elevador
             // 
             this.buttonEm.BackColor = System.Drawing.Color.Red;
             this.buttonEm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonEm.Location = new System.Drawing.Point(164, 116);
+            this.buttonEm.Location = new System.Drawing.Point(164, 126);
             this.buttonEm.Name = "buttonEm";
             this.buttonEm.Size = new System.Drawing.Size(55, 54);
             this.buttonEm.TabIndex = 6;
@@ -144,6 +148,7 @@ namespace t2_ssup_controle_elevador
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox2.Location = new System.Drawing.Point(260, 10);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(112, 23);
             this.textBox2.TabIndex = 7;
             this.textBox2.Text = "Modo de Operação";
@@ -152,6 +157,8 @@ namespace t2_ssup_controle_elevador
             // 
             this.checkBox_ma.AutoSize = true;
             this.checkBox_ma.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.checkBox_ma.Checked = true;
+            this.checkBox_ma.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_ma.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox_ma.ForeColor = System.Drawing.SystemColors.Control;
             this.checkBox_ma.Location = new System.Drawing.Point(475, 11);
@@ -204,8 +211,9 @@ namespace t2_ssup_controle_elevador
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(321, 39);
+            this.textBox3.Location = new System.Drawing.Point(321, 35);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(238, 31);
             this.textBox3.TabIndex = 20;
             this.textBox3.Text = "Painel de Navegação Externo";
@@ -216,9 +224,9 @@ namespace t2_ssup_controle_elevador
             this.status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.status.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.status.ForeColor = System.Drawing.Color.Gold;
-            this.status.Location = new System.Drawing.Point(260, 65);
+            this.status.Location = new System.Drawing.Point(260, 61);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(52, 56);
+            this.status.Size = new System.Drawing.Size(52, 61);
             this.status.TabIndex = 21;
             this.status.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.status.Click += new System.EventHandler(this.status_Click);
@@ -229,8 +237,9 @@ namespace t2_ssup_controle_elevador
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Location = new System.Drawing.Point(260, 39);
+            this.textBox4.Location = new System.Drawing.Point(260, 35);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(52, 23);
             this.textBox4.TabIndex = 22;
             this.textBox4.Text = "Status";
@@ -244,6 +253,7 @@ namespace t2_ssup_controle_elevador
             this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox5.Location = new System.Drawing.Point(260, 128);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(55, 23);
             this.textBox5.TabIndex = 23;
             this.textBox5.Text = "Térreo";
@@ -257,6 +267,7 @@ namespace t2_ssup_controle_elevador
             this.textBox6.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox6.Location = new System.Drawing.Point(321, 99);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(55, 23);
             this.textBox6.TabIndex = 24;
             this.textBox6.Text = "1º Andar";
@@ -270,6 +281,7 @@ namespace t2_ssup_controle_elevador
             this.textBox7.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox7.Location = new System.Drawing.Point(382, 98);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(55, 23);
             this.textBox7.TabIndex = 25;
             this.textBox7.Text = "2º Andar";
@@ -284,6 +296,7 @@ namespace t2_ssup_controle_elevador
             this.textBox8.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox8.Location = new System.Drawing.Point(443, 98);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(55, 23);
             this.textBox8.TabIndex = 26;
             this.textBox8.Text = "3º Andar";
@@ -297,6 +310,7 @@ namespace t2_ssup_controle_elevador
             this.textBox9.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox9.Location = new System.Drawing.Point(504, 98);
             this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(55, 23);
             this.textBox9.TabIndex = 27;
             this.textBox9.Text = "4º Andar";
@@ -368,11 +382,37 @@ namespace t2_ssup_controle_elevador
             this.d4.UseVisualStyleBackColor = true;
             this.d4.Click += new System.EventHandler(this.d4_Click);
             // 
+            // vmodo
+            // 
+            this.vmodo.BackColor = System.Drawing.SystemColors.Desktop;
+            this.vmodo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vmodo.Font = new System.Drawing.Font("Segoe UI", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.vmodo.ForeColor = System.Drawing.Color.Lime;
+            this.vmodo.Location = new System.Drawing.Point(12, 41);
+            this.vmodo.Name = "vmodo";
+            this.vmodo.Size = new System.Drawing.Size(239, 22);
+            this.vmodo.TabIndex = 35;
+            this.vmodo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // vexterno
+            // 
+            this.vexterno.BackColor = System.Drawing.SystemColors.Desktop;
+            this.vexterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vexterno.Font = new System.Drawing.Font("Segoe UI", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.vexterno.ForeColor = System.Drawing.Color.Red;
+            this.vexterno.Location = new System.Drawing.Point(321, 69);
+            this.vexterno.Name = "vexterno";
+            this.vexterno.Size = new System.Drawing.Size(238, 22);
+            this.vexterno.TabIndex = 36;
+            this.vexterno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 191);
+            this.Controls.Add(this.vexterno);
+            this.Controls.Add(this.vmodo);
             this.Controls.Add(this.d4);
             this.Controls.Add(this.d3);
             this.Controls.Add(this.up3);
@@ -435,6 +475,8 @@ namespace t2_ssup_controle_elevador
         private System.Windows.Forms.Button up3;
         private System.Windows.Forms.Button d3;
         private System.Windows.Forms.Button d4;
+        private System.Windows.Forms.Label vmodo;
+        private System.Windows.Forms.Label vexterno;
     }
 }
 

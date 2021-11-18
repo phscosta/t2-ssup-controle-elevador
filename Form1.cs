@@ -20,6 +20,7 @@ namespace t2_ssup_controle_elevador
             Thread.Sleep(1000);
 
             status.Text = "T";
+            vmodo.Text = "MODO MANUAL";
         }
 
         protected  static string atual_andar = "T";
@@ -34,21 +35,6 @@ namespace t2_ssup_controle_elevador
         }
 
         /***********************************************************/
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
 
         //Botão Térreo - Navegação Interna
         private void button1_Click(object sender, EventArgs e)
@@ -207,10 +193,18 @@ namespace t2_ssup_controle_elevador
                 case 0:
                     status.Text = "X";
                     status.BackColor = Color.Red;
+                    vmodo.ForeColor = Color.Red;
+                    vmodo.Text = "ENVIANDO ALERTA PARA CENTRAL...";
+                    vexterno.ForeColor = Color.Red;
+                    vexterno.Text = "PERIGO: MAL FUNCIONAMENTO!";
                     break;
                 case 1:
                     status.BackColor = Color.Black;
                     status.Text = "T";
+                    vmodo.ForeColor = Color.Lime;
+                    vmodo.Text = "";
+                    vexterno.ForeColor = Color.Lime;
+                    vexterno.Text = "-----------------------------";
                     break;
             }
             
@@ -244,6 +238,7 @@ namespace t2_ssup_controle_elevador
         {
             deslocamento();
             status.Text = "T";
+            atual_andar = status.Text;
         }
 
         //Botão Up - 1º Andar - Navegação Externa
@@ -251,6 +246,7 @@ namespace t2_ssup_controle_elevador
         {
             deslocamento();
             status.Text = "1";
+            atual_andar = status.Text;
         }
 
         //Botão Down - 1º Andar - Navegação Externa
@@ -258,6 +254,7 @@ namespace t2_ssup_controle_elevador
         {
             deslocamento();
             status.Text = "1";
+            atual_andar = status.Text;
         }
 
         //Botão Up - 2º Andar - Navegação Externa
@@ -265,6 +262,7 @@ namespace t2_ssup_controle_elevador
         {
             deslocamento();
             status.Text = "2";
+            atual_andar = status.Text;
         }
 
         //Botão Down - 2º Andar - Navegação Externa
@@ -272,6 +270,7 @@ namespace t2_ssup_controle_elevador
         {
             deslocamento();
             status.Text = "2";
+            atual_andar = status.Text;
         }
 
         //Botão Up - 3º Andar - Navegação Externa
@@ -279,6 +278,7 @@ namespace t2_ssup_controle_elevador
         {
             deslocamento();
             status.Text = "3";
+            atual_andar = status.Text;
         }
 
         //Botão Down - 3º Andar - Navegação Externa
@@ -286,6 +286,7 @@ namespace t2_ssup_controle_elevador
         {
             deslocamento();
             status.Text = "3";
+            atual_andar = status.Text;
         }
 
         //Botão Down - 4º Andar - Navegação Externa
@@ -293,24 +294,30 @@ namespace t2_ssup_controle_elevador
         {
             deslocamento();
             status.Text = "4";
+            atual_andar = status.Text;
         }
 
         //Modo de Operação - MANUAL
         private void checkBox_ma_CheckedChanged(object sender, EventArgs e)
         {
             operacao = 0;
+            vmodo.Text = "MODO MANUAL";
         }
 
         //Modo de Operação - AUTOMÁTICO
         private void checkBox_at_CheckedChanged(object sender, EventArgs e)
         {
             operacao = 1;
-
+            vmodo.Text = "MODO AUTOMATICO";
+            
             Random move_andar = new Random();
 
-            while (operacao == 1)
+            Thread.Sleep(1000);
+
+            /*
+            while (operacao == 1 && vmodo.Text == "MODO AUTOMATICO")
             {
-                int andar = move_andar.Next(0, 4);
+                int andar = move_andar.Next(0, 5);
 
                 string tela_status = andar.ToString();
 
@@ -318,7 +325,7 @@ namespace t2_ssup_controle_elevador
                 {
                     case 0:
                         deslocamento();
-                        status.Text = tela_status;
+                        status.Text = "T";
                         break;
                     case 1:
                         deslocamento();
@@ -338,8 +345,13 @@ namespace t2_ssup_controle_elevador
                         break;
                 }
 
-                break;
-            }
+                Thread.Sleep(1000);
+
+                if (vmodo.Text == "MODO MANUAL")
+                {
+                    operacao = 0;
+                }
+                */
         }
     }
 }
