@@ -309,13 +309,10 @@ namespace t2_ssup_controle_elevador
         {
             operacao = 1;
             vmodo.Text = "MODO AUTOMATICO";
-            
+
             Random move_andar = new Random();
 
-            Thread.Sleep(1000);
-
-            /*
-            while (operacao == 1 && vmodo.Text == "MODO AUTOMATICO")
+            while (operacao == 1)
             {
                 int andar = move_andar.Next(0, 5);
 
@@ -345,13 +342,15 @@ namespace t2_ssup_controle_elevador
                         break;
                 }
 
-                Thread.Sleep(1000);
-
-                if (vmodo.Text == "MODO MANUAL")
+                if (operacao == 1)
                 {
                     operacao = 0;
                 }
-                */
+                else
+                {
+                    operacao = 1;
+                }
+            }
         }
     }
 }
