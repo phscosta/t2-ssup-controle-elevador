@@ -16,11 +16,17 @@ namespace t2_ssup_controle_elevador
         public Form1()
         {
             InitializeComponent();
+
+            Thread.Sleep(1000);
+
+            status.Text = "T";
         }
 
-        protected  static string atual_andar = "0";
+        protected  static string atual_andar = "T";
         
         protected static int control = 0;
+
+        protected static int operacao = 0;
 
         public void deslocamento()
         {
@@ -47,11 +53,11 @@ namespace t2_ssup_controle_elevador
         //Botão Térreo - Navegação Interna
         private void button1_Click(object sender, EventArgs e)
         {
-            status.Text = "T";
+            atual_andar = status.Text;
 
             switch (atual_andar)
             {
-                case "0":
+                case "T":
                     status.Text = "T";
                     break;
                 case "1":
@@ -76,11 +82,11 @@ namespace t2_ssup_controle_elevador
         //Botão 1 - Navegação Interna
         private void button2_Click(object sender, EventArgs e)
         {
-            atual_andar = "1";
+            atual_andar = status.Text;
 
             switch (atual_andar)
             {
-                case "0":
+                case "T":
                     deslocamento();
                     status.Text = "1";
                     break;
@@ -106,11 +112,11 @@ namespace t2_ssup_controle_elevador
         //Botão 2 - Navegação Interna
         private void button3_Click(object sender, EventArgs e)
         {
-            status.Text = "2";
+            atual_andar = status.Text;
 
             switch (atual_andar)
             {
-                case "0":
+                case "T":
                     deslocamento();
                     status.Text = "2";
                     break;
@@ -136,11 +142,11 @@ namespace t2_ssup_controle_elevador
         //Botão 3 - Navegação Interna
         private void button4_Click(object sender, EventArgs e)
         {
-            status.Text = "3";
+            atual_andar = status.Text;
 
             switch (atual_andar)
             {
-                case "0":
+                case "T":
                     deslocamento();
                     status.Text = "3";
                     break;
@@ -166,11 +172,11 @@ namespace t2_ssup_controle_elevador
         //Botão 4 - Navegação Interna
         private void button5_Click(object sender, EventArgs e)
         {
-            status.Text = "4";
+            atual_andar = status.Text;
 
             switch (atual_andar)
             {
-                case "0":
+                case "T":
                     deslocamento();
                     status.Text = "4";
                     break;
@@ -193,11 +199,9 @@ namespace t2_ssup_controle_elevador
             }
         }
 
+        //Cotrole de Emergência - EM
         private void button6_Click(object sender, EventArgs e)
         {
-            status.Text = "X";
-            status.BackColor = Color.Red;
-
             switch (control)
             {
                 case 0:
@@ -206,7 +210,7 @@ namespace t2_ssup_controle_elevador
                     break;
                 case 1:
                     status.BackColor = Color.Black;
-                    status.Text = "";
+                    status.Text = "T";
                     break;
             }
             
@@ -289,6 +293,53 @@ namespace t2_ssup_controle_elevador
         {
             deslocamento();
             status.Text = "4";
+        }
+
+        //Modo de Operação - MANUAL
+        private void checkBox_ma_CheckedChanged(object sender, EventArgs e)
+        {
+            operacao = 0;
+        }
+
+        //Modo de Operação - AUTOMÁTICO
+        private void checkBox_at_CheckedChanged(object sender, EventArgs e)
+        {
+            operacao = 1;
+
+            Random move_andar = new Random();
+
+            while (operacao == 1)
+            {
+                int andar = move_andar.Next(0, 4);
+
+                string tela_status = andar.ToString();
+
+                switch (andar)
+                {
+                    case 0:
+                        deslocamento();
+                        status.Text = tela_status;
+                        break;
+                    case 1:
+                        deslocamento();
+                        status.Text = tela_status;
+                        break;
+                    case 2:
+                        deslocamento();
+                        status.Text = tela_status;
+                        break;
+                    case 3:
+                        deslocamento();
+                        status.Text = tela_status;
+                        break;
+                    case 4:
+                        deslocamento();
+                        status.Text = tela_status;
+                        break;
+                }
+
+                break;
+            }
         }
     }
 }

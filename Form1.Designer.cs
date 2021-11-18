@@ -160,6 +160,7 @@ namespace t2_ssup_controle_elevador
             this.checkBox_ma.TabIndex = 8;
             this.checkBox_ma.Text = "Manual";
             this.checkBox_ma.UseVisualStyleBackColor = false;
+            this.checkBox_ma.CheckedChanged += new System.EventHandler(this.checkBox_ma_CheckedChanged);
             // 
             // checkBox_at
             // 
@@ -173,6 +174,7 @@ namespace t2_ssup_controle_elevador
             this.checkBox_at.TabIndex = 9;
             this.checkBox_at.Text = "Automático";
             this.checkBox_at.UseVisualStyleBackColor = false;
+            this.checkBox_at.CheckedChanged += new System.EventHandler(this.checkBox_at_CheckedChanged);
             // 
             // up1
             // 
