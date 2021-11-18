@@ -126,7 +126,7 @@ namespace t2_ssup_controle_elevador
             // 
             // buttonEm
             // 
-            this.buttonEm.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonEm.BackColor = System.Drawing.Color.Red;
             this.buttonEm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonEm.Location = new System.Drawing.Point(164, 116);
             this.buttonEm.Name = "buttonEm";
@@ -213,7 +213,7 @@ namespace t2_ssup_controle_elevador
             this.status.BackColor = System.Drawing.SystemColors.Desktop;
             this.status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.status.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.status.ForeColor = System.Drawing.Color.Gold;
             this.status.Location = new System.Drawing.Point(260, 65);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(52, 56);

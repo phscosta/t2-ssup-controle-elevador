@@ -198,14 +198,26 @@ namespace t2_ssup_controle_elevador
             status.Text = "X";
             status.BackColor = Color.Red;
 
-            if (control == 1)
+            switch (control)
             {
-                status.BackColor = Color.Black;
-                status.Text = "";
-                control = 0;
+                case 0:
+                    status.Text = "X";
+                    status.BackColor = Color.Red;
+                    break;
+                case 1:
+                    status.BackColor = Color.Black;
+                    status.Text = "";
+                    break;
             }
-
-            control++;
+            
+            if (control < 1)
+            {
+                control++;
+            }
+            else if (control == 1)
+            {
+                control--;
+            }
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
