@@ -23,11 +23,18 @@ namespace t2_ssup_controle_elevador
             vmodo.Text = "MODO MANUAL";
         }
 
+        private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         protected  static string atual_andar = "T";
         
         protected static int control = 0;
 
         protected static int operacao = 0;
+
+        public void Form1_Load()
+        {
+            Log.Info("Operação Iniciada");
+        }
 
         public void deslocamento()
         {
@@ -45,6 +52,7 @@ namespace t2_ssup_controle_elevador
             {
                 case "T":
                     status.Text = "T";
+                    Log.Info("Andar: Térreo");
                     break;
                 case "1":
                     deslocamento();
@@ -75,6 +83,7 @@ namespace t2_ssup_controle_elevador
                 case "T":
                     deslocamento();
                     status.Text = "1";
+                    Log.Info("Andar: 1");
                     break;
                 case "1":
                     deslocamento();

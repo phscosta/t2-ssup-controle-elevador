@@ -1,0 +1,6 @@
+ date [ thread] level logger - message newline date [ thread] level logger - message newline2021-12-04 18:00:48,852 [1] INFO t2_ssup_controle_elevador.Form1 - Andar: 1 
+2021-12-04 18:01:12,256 [1] INFO t2_ssup_controle_elevador.Form1 - Andar: Térreo 
+2021-12-04 18:01:23,075 [1] INFO t2_ssup_controle_elevador.Form1 - Andar: 1 
+2021-12-04 18:01:37,135 [1] INFO t2_ssup_controle_elevador.Form1 - Andar: Térreo 
+2021-12-04 18:01:46,614 [1] INFO t2_ssup_controle_elevador.Form1 - Andar: Térreo 
+2021-12-04 18:01:57,178 [1] INFO t2_ssup_controle_elevador.Form1 - Andar: 1 
