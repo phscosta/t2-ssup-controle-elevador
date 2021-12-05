@@ -157,7 +157,7 @@ namespace t2_ssup_controle_elevador
             // 
             this.checkBox_ma.AutoSize = true;
             this.checkBox_ma.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.checkBox_ma.Checked = true;
+            this.checkBox_ma.Checked = false;
             this.checkBox_ma.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_ma.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox_ma.ForeColor = System.Drawing.SystemColors.Control;

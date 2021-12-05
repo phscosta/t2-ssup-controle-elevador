@@ -11,18 +11,27 @@ using System.Windows.Forms;
 
 namespace t2_ssup_controle_elevador
 {
+    class AutoControle
+    {
+        public delegate void AutoModoDelegate(object sender, EventArgs e);
+
+        public event AutoModoDelegate AutoModo;
+
+        public void doAutoModo()
+        {
+            while (true)
+            {
+                if (AutoModo != null)
+                {
+                    AutoModo(this, EventArgs.Empty);
+                }
+                Thread.Sleep(3000);
+            }
+        }
+    }
+
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            InitializeComponent();
-
-            Thread.Sleep(1000);
-
-            status.Text = "T";
-            vmodo.Text = "MODO MANUAL";
-        }
-
         private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         protected  static string atual_andar = "T";
@@ -31,15 +40,38 @@ namespace t2_ssup_controle_elevador
 
         protected static int operacao = 0;
 
-        public void Form1_Load()
+        AutoControle autoControle;
+
+        Task automata;
+
+        public Form1()
         {
-            Log.Info("Operação Iniciada");
+            InitializeComponent();
+
+            this.autoControle = new AutoControle();
+            this.automata = new Task(autoControle.doAutoModo);
         }
 
         public void deslocamento()
         {
             Thread.Sleep(5000);
         }
+
+        //Estabelece o modo default do elevador após carga da aplicação
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Log.Info("OPERAÇÃO INICIADA");
+
+            status.Text = "T";
+
+            Log.Info("Andar: Térreo");
+
+            checkBox_ma.Checked = true;
+
+            checkBox_ma_CheckedChanged(sender, e);
+        }
+
+        
 
         /***********************************************************/
 
@@ -57,18 +89,22 @@ namespace t2_ssup_controle_elevador
                 case "1":
                     deslocamento();
                     status.Text = "T";
+                    Log.Info("Andar: Térreo");
                     break;
                 case "2":
                     deslocamento();
                     status.Text = "T";
+                    Log.Info("Andar: Térreo");
                     break;
                 case "3":
                     deslocamento();
                     status.Text = "T";
+                    Log.Info("Andar: Térreo");
                     break;
                 case "4":
                     deslocamento();
                     status.Text = "T";
+                    Log.Info("Andar: Térreo");
                     break;
             }
         }
@@ -86,20 +122,23 @@ namespace t2_ssup_controle_elevador
                     Log.Info("Andar: 1");
                     break;
                 case "1":
-                    deslocamento();
                     status.Text = "1";
+                    Log.Info("Andar: 1");
                     break;
                 case "2":
                     deslocamento();
                     status.Text = "1";
+                    Log.Info("Andar: 1");
                     break;
                 case "3":
                     deslocamento();
                     status.Text = "1";
+                    Log.Info("Andar: 1");
                     break;
                 case "4":
                     deslocamento();
                     status.Text = "1";
+                    Log.Info("Andar: 1");
                     break;
             }
         }
@@ -114,22 +153,26 @@ namespace t2_ssup_controle_elevador
                 case "T":
                     deslocamento();
                     status.Text = "2";
+                    Log.Info("Andar: 2");
                     break;
                 case "1":
                     deslocamento();
                     status.Text = "2";
+                    Log.Info("Andar: 2");
                     break;
                 case "2":
-                    deslocamento();
                     status.Text = "2";
+                    Log.Info("Andar: 2");
                     break;
                 case "3":
                     deslocamento();
                     status.Text = "2";
+                    Log.Info("Andar: 2");
                     break;
                 case "4":
                     deslocamento();
                     status.Text = "2";
+                    Log.Info("Andar: 2");
                     break;
             }
         }
@@ -144,22 +187,26 @@ namespace t2_ssup_controle_elevador
                 case "T":
                     deslocamento();
                     status.Text = "3";
+                    Log.Info("Andar: 3");
                     break;
                 case "1":
                     deslocamento();
                     status.Text = "3";
+                    Log.Info("Andar: 3");
                     break;
                 case "2":
                     deslocamento();
                     status.Text = "3";
+                    Log.Info("Andar: 3");
                     break;
                 case "3":
-                    deslocamento();
                     status.Text = "3";
+                    Log.Info("Andar: 3");
                     break;
                 case "4":
                     deslocamento();
                     status.Text = "3";
+                    Log.Info("Andar: 3");
                     break;
             }
         }
@@ -174,22 +221,26 @@ namespace t2_ssup_controle_elevador
                 case "T":
                     deslocamento();
                     status.Text = "4";
+                    Log.Info("Andar: 4");
                     break;
                 case "1":
                     deslocamento();
                     status.Text = "4";
+                    Log.Info("Andar: 4");
                     break;
                 case "2":
                     deslocamento();
                     status.Text = "4";
+                    Log.Info("Andar: 4");
                     break;
                 case "3":
                     deslocamento();
                     status.Text = "4";
+                    Log.Info("Andar: 4");
                     break;
                 case "4":
-                    deslocamento();
                     status.Text = "4";
+                    Log.Info("Andar: 4");
                     break;
             }
         }
@@ -206,6 +257,7 @@ namespace t2_ssup_controle_elevador
                     vmodo.Text = "ENVIANDO ALERTA PARA CENTRAL...";
                     vexterno.ForeColor = Color.Red;
                     vexterno.Text = "PERIGO: MAL FUNCIONAMENTO!";
+                    Log.Info("EMERGÊNCIA: OPERAÇÃO COM MAL FUNCIONAMENTO");
                     break;
                 case 1:
                     status.BackColor = Color.Black;
@@ -214,9 +266,11 @@ namespace t2_ssup_controle_elevador
                     vmodo.Text = "";
                     vexterno.ForeColor = Color.Lime;
                     vexterno.Text = "-----------------------------";
+                    Log.Info("OPERAÇÃO RESTABELECIDA");
                     break;
             }
             
+            //Controle do botão de emergência
             if (control < 1)
             {
                 control++;
@@ -229,17 +283,12 @@ namespace t2_ssup_controle_elevador
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-
+            //Caixa de texto
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+                
         private void status_Click(object sender, EventArgs e)
         {
-
+            //Tela de status
         }
 
         //Botão Up - Térreo - Navegação Externa
@@ -248,6 +297,7 @@ namespace t2_ssup_controle_elevador
             deslocamento();
             status.Text = "T";
             atual_andar = status.Text;
+            Log.Info("Andar: Térreo");
         }
 
         //Botão Up - 1º Andar - Navegação Externa
@@ -256,6 +306,7 @@ namespace t2_ssup_controle_elevador
             deslocamento();
             status.Text = "1";
             atual_andar = status.Text;
+            Log.Info("Andar: 1");
         }
 
         //Botão Down - 1º Andar - Navegação Externa
@@ -264,6 +315,7 @@ namespace t2_ssup_controle_elevador
             deslocamento();
             status.Text = "1";
             atual_andar = status.Text;
+            Log.Info("Andar: 1");
         }
 
         //Botão Up - 2º Andar - Navegação Externa
@@ -272,6 +324,7 @@ namespace t2_ssup_controle_elevador
             deslocamento();
             status.Text = "2";
             atual_andar = status.Text;
+            Log.Info("Andar: 2");
         }
 
         //Botão Down - 2º Andar - Navegação Externa
@@ -280,6 +333,7 @@ namespace t2_ssup_controle_elevador
             deslocamento();
             status.Text = "2";
             atual_andar = status.Text;
+            Log.Info("Andar: 2");
         }
 
         //Botão Up - 3º Andar - Navegação Externa
@@ -288,6 +342,7 @@ namespace t2_ssup_controle_elevador
             deslocamento();
             status.Text = "3";
             atual_andar = status.Text;
+            Log.Info("Andar: 3");
         }
 
         //Botão Down - 3º Andar - Navegação Externa
@@ -296,6 +351,7 @@ namespace t2_ssup_controle_elevador
             deslocamento();
             status.Text = "3";
             atual_andar = status.Text;
+            Log.Info("Andar: 3");
         }
 
         //Botão Down - 4º Andar - Navegação Externa
@@ -304,62 +360,86 @@ namespace t2_ssup_controle_elevador
             deslocamento();
             status.Text = "4";
             atual_andar = status.Text;
+            Log.Info("Andar: 4");
         }
 
         //Modo de Operação - MANUAL
         private void checkBox_ma_CheckedChanged(object sender, EventArgs e)
         {
-            operacao = 0;
-            vmodo.Text = "MODO MANUAL";
+            if (checkBox_ma.Checked == true)
+            {
+                operacao = 0;
+                vmodo.Text = "MODO MANUAL";
+                checkBox_ma.Checked = true;
+            }
+            else
+            {
+                checkBox_at.Checked = true;
+                checkBox_at_CheckedChanged(sender, e);
+            }
         }
 
         //Modo de Operação - AUTOMÁTICO
         private void checkBox_at_CheckedChanged(object sender, EventArgs e)
         {
-            operacao = 1;
-            vmodo.Text = "MODO AUTOMATICO";
-
-            Random move_andar = new Random();
-
-            while (operacao == 1)
+            if (checkBox_at.Checked == true)
             {
-                int andar = move_andar.Next(0, 5);
+                operacao = 1;
+                vmodo.Text = "MODO AUTOMATICO";
 
-                string tela_status = andar.ToString();
+                //this.automata.Start();
 
-                switch (andar)
-                {
-                    case 0:
-                        deslocamento();
-                        status.Text = "T";
-                        break;
-                    case 1:
-                        deslocamento();
-                        status.Text = tela_status;
-                        break;
-                    case 2:
-                        deslocamento();
-                        status.Text = tela_status;
-                        break;
-                    case 3:
-                        deslocamento();
-                        status.Text = tela_status;
-                        break;
-                    case 4:
-                        deslocamento();
-                        status.Text = tela_status;
-                        break;
-                }
+                int cont = 0;
 
-                if (operacao == 1)
+                this.Invoke((MethodInvoker)delegate ()
                 {
-                    operacao = 0;
-                }
-                else
-                {
-                    operacao = 1;
-                }
+                    vexterno.Text = "TESTE " + cont;
+
+                    cont++;
+                    /*
+                    Random move_andar = new Random();
+
+                    int andar = move_andar.Next(0, 5);
+
+                    string tela_status = andar.ToString();
+
+                    while (operacao == 1)
+                    {
+                        switch (andar)
+                        {
+                            case 0:
+                                status.Text = "T";
+                                break;
+                            case 1:
+                                status.Text = tela_status;
+                                break;
+                            case 2:
+                                status.Text = tela_status;
+                                break;
+                            case 3:
+                                status.Text = tela_status;
+                                break;
+                            case 4:
+                                status.Text = tela_status;
+                                break;
+                        }
+                    }
+                    */
+                });
             }
+            else if (checkBox_at.Checked == false)
+            {
+                this.Invoke((MethodInvoker)delegate ()
+                {
+                    checkBox_ma.Checked = true;
+                    checkBox_ma_CheckedChanged(sender, e);
+                });
+            }
+        }
+
+        private void changeMode(object sender, EventArgs e)
+        {
+            
         }
     }
 }
