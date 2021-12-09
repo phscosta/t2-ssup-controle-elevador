@@ -17,3 +17,4 @@ C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ss
 C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.pdb
 C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.genruntimeconfig.cache
 C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2_ssup_controle_elevador.AutoControle.resources
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.csproj.CopyComplete
