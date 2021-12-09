@@ -38,8 +38,6 @@ namespace t2_ssup_controle_elevador
         
         protected static int control = 0;
 
-        protected static int operacao = 0;
-
         AutoControle autoControle;
 
         Task automata;
@@ -49,6 +47,7 @@ namespace t2_ssup_controle_elevador
             InitializeComponent();
 
             this.autoControle = new AutoControle();
+            this.autoControle.AutoModo += checkBox_at_CheckedChanged;
             this.automata = new Task(autoControle.doAutoModo);
         }
 
@@ -66,12 +65,16 @@ namespace t2_ssup_controle_elevador
 
             Log.Info("Andar: Térreo");
 
+            //checkBox_at.Checked = true;
+
+            this.automata.Start();
+
+            //checkBox_at_CheckedChanged(sender, e);
+
             checkBox_ma.Checked = true;
 
             checkBox_ma_CheckedChanged(sender, e);
         }
-
-        
 
         /***********************************************************/
 
@@ -263,10 +266,10 @@ namespace t2_ssup_controle_elevador
                     status.BackColor = Color.Black;
                     status.Text = "T";
                     vmodo.ForeColor = Color.Lime;
-                    vmodo.Text = "";
                     vexterno.ForeColor = Color.Lime;
-                    vexterno.Text = "-----------------------------";
+                    vexterno.Text = "";
                     Log.Info("OPERAÇÃO RESTABELECIDA");
+                    checkBox_ma_CheckedChanged(sender, e);
                     break;
             }
             
@@ -294,73 +297,145 @@ namespace t2_ssup_controle_elevador
         //Botão Up - Térreo - Navegação Externa
         private void upT_Click(object sender, EventArgs e)
         {
-            deslocamento();
-            status.Text = "T";
-            atual_andar = status.Text;
-            Log.Info("Andar: Térreo");
+            if (checkBox_at.Checked == true)
+            {
+                status.Text = "T";
+                atual_andar = status.Text;
+                Log.Info("Andar: Térreo");
+            }
+            else
+            {
+                deslocamento();
+                status.Text = "T";
+                atual_andar = status.Text;
+                Log.Info("Andar: Térreo");
+            } 
         }
 
         //Botão Up - 1º Andar - Navegação Externa
         private void up1_Click(object sender, EventArgs e)
         {
-            deslocamento();
-            status.Text = "1";
-            atual_andar = status.Text;
-            Log.Info("Andar: 1");
+            if (checkBox_at.Checked == true)
+            {
+                status.Text = "1";
+                atual_andar = status.Text;
+                Log.Info("Andar: 1");
+            }
+            else
+            {
+                deslocamento();
+                status.Text = "1";
+                atual_andar = status.Text;
+                Log.Info("Andar: 1");
+            }
         }
 
         //Botão Down - 1º Andar - Navegação Externa
         private void button8_Click(object sender, EventArgs e)
         {
-            deslocamento();
-            status.Text = "1";
-            atual_andar = status.Text;
-            Log.Info("Andar: 1");
+            if (checkBox_at.Checked == true)
+            {
+                status.Text = "1";
+                atual_andar = status.Text;
+                Log.Info("Andar: 1");
+            }
+            else
+            {
+                deslocamento();
+                status.Text = "1";
+                atual_andar = status.Text;
+                Log.Info("Andar: 1");
+            }
         }
 
         //Botão Up - 2º Andar - Navegação Externa
         private void up2_Click(object sender, EventArgs e)
         {
-            deslocamento();
-            status.Text = "2";
-            atual_andar = status.Text;
-            Log.Info("Andar: 2");
+            if (checkBox_at.Checked == true)
+            {
+                status.Text = "2";
+                atual_andar = status.Text;
+                Log.Info("Andar: 2");
+            }
+            else
+            {
+                deslocamento();
+                status.Text = "2";
+                atual_andar = status.Text;
+                Log.Info("Andar: 2");
+            }
         }
 
         //Botão Down - 2º Andar - Navegação Externa
         private void d2_Click(object sender, EventArgs e)
         {
-            deslocamento();
-            status.Text = "2";
-            atual_andar = status.Text;
-            Log.Info("Andar: 2");
+            if (checkBox_at.Checked == true)
+            {
+                status.Text = "2";
+                atual_andar = status.Text;
+                Log.Info("Andar: 2");
+            }
+            else
+            {
+                deslocamento();
+                status.Text = "2";
+                atual_andar = status.Text;
+                Log.Info("Andar: 2");
+            }
         }
 
         //Botão Up - 3º Andar - Navegação Externa
         private void up3_Click(object sender, EventArgs e)
         {
-            deslocamento();
-            status.Text = "3";
-            atual_andar = status.Text;
-            Log.Info("Andar: 3");
+            if (checkBox_at.Checked == true)
+            {
+                status.Text = "3";
+                atual_andar = status.Text;
+                Log.Info("Andar: 3");
+            }
+            else
+            {
+                deslocamento();
+                status.Text = "3";
+                atual_andar = status.Text;
+                Log.Info("Andar: 3");
+            }
         }
 
         //Botão Down - 3º Andar - Navegação Externa
         private void d3_Click(object sender, EventArgs e)
         {
-            deslocamento();
-            status.Text = "3";
-            atual_andar = status.Text;
-            Log.Info("Andar: 3");
+            if (checkBox_at.Checked == true)
+            {
+                status.Text = "3";
+                atual_andar = status.Text;
+                Log.Info("Andar: 3");
+            }
+            else
+            {
+                deslocamento();
+                status.Text = "3";
+                atual_andar = status.Text;
+                Log.Info("Andar: 3");
+            }
         }
 
         //Botão Down - 4º Andar - Navegação Externa
         private void d4_Click(object sender, EventArgs e)
         {
-            deslocamento();
-            status.Text = "4";
-            atual_andar = status.Text;
-            Log.Info("Andar: 4");
+            if (checkBox_at.Checked == true)
+            {
+                status.Text = "4";
+                atual_andar = status.Text;
+                Log.Info("Andar: 4");
+            }
+            else
+            {
+                deslocamento();
+                status.Text = "4";
+                atual_andar = status.Text;
+                Log.Info("Andar: 4");
+            }
         }
 
         //Modo de Operação - MANUAL
@@ -368,14 +443,13 @@ namespace t2_ssup_controle_elevador
         {
             if (checkBox_ma.Checked == true)
             {
-                operacao = 0;
                 vmodo.Text = "MODO MANUAL";
                 checkBox_ma.Checked = true;
+                checkBox_at.Checked = false;
             }
             else
             {
                 checkBox_at.Checked = true;
-                checkBox_at_CheckedChanged(sender, e);
             }
         }
 
@@ -384,62 +458,216 @@ namespace t2_ssup_controle_elevador
         {
             if (checkBox_at.Checked == true)
             {
-                operacao = 1;
                 vmodo.Text = "MODO AUTOMATICO";
-
-                //this.automata.Start();
-
-                int cont = 0;
+                checkBox_ma.Checked = false;
 
                 this.Invoke((MethodInvoker)delegate ()
                 {
-                    vexterno.Text = "TESTE " + cont;
-
-                    cont++;
-                    /*
-                    Random move_andar = new Random();
-
-                    int andar = move_andar.Next(0, 5);
-
-                    string tela_status = andar.ToString();
-
-                    while (operacao == 1)
+                    try
                     {
+                        Random move_andar = new Random();
+                        Random selecao = new Random();
+
+                        int andar = move_andar.Next(0, 5);
+
+                        int b_selecao = selecao.Next(0, 8);
+
                         switch (andar)
                         {
                             case 0:
-                                status.Text = "T";
+                                if (b_selecao == 0)
+                                {
+                                    status.Text = "T";
+                                    Log.Info("Andar: Térreo");
+                                }
+                                else if (b_selecao == 1)
+                                {
+                                    up1_Click(sender, e);
+                                }
+                                else if (b_selecao == 2)
+                                {
+                                    button8_Click(sender, e);
+                                }
+                                else if (b_selecao == 3)
+                                {
+                                    up2_Click(sender, e);
+                                }
+                                else if (b_selecao == 4)
+                                {
+                                    d2_Click(sender, e);
+                                }
+                                else if (b_selecao == 5)
+                                {
+                                    up3_Click(sender, e);
+                                }
+                                else if (b_selecao == 6)
+                                {
+                                    d3_Click(sender, e);
+                                }
+                                else
+                                {
+                                    d4_Click(sender, e);
+                                }
                                 break;
                             case 1:
-                                status.Text = tela_status;
+                                if (b_selecao == 0)
+                                {
+                                    upT_Click(sender, e);
+                                }
+                                else if (b_selecao == 1)
+                                {
+                                    status.Text = "1";
+                                    Log.Info("Andar: 1");
+                                }
+                                else if (b_selecao == 2)
+                                {
+                                    status.Text = "1";
+                                    Log.Info("Andar: 1");
+                                }
+                                else if (b_selecao == 3)
+                                {
+                                    up2_Click(sender, e);
+                                }
+                                else if (b_selecao == 4)
+                                {
+                                    d2_Click(sender, e);
+                                }
+                                else if (b_selecao == 5)
+                                {
+                                    up3_Click(sender, e);
+                                }
+                                else if (b_selecao == 6)
+                                {
+                                    d3_Click(sender, e);
+                                }
+                                else
+                                {
+                                    d4_Click(sender, e);
+                                }
                                 break;
                             case 2:
-                                status.Text = tela_status;
+                                if (b_selecao == 0)
+                                {
+                                    upT_Click(sender, e);
+                                }
+                                else if (b_selecao == 1)
+                                {
+                                    up1_Click(sender, e);
+                                }
+                                else if (b_selecao == 2)
+                                {
+                                    button8_Click(sender, e);
+                                }
+                                else if (b_selecao == 3)
+                                {
+                                    status.Text = "2";
+                                    Log.Info("Andar: 2");
+                                }
+                                else if (b_selecao == 4)
+                                {
+                                    status.Text = "2";
+                                    Log.Info("Andar: 2");
+                                }
+                                else if (b_selecao == 5)
+                                {
+                                    up3_Click(sender, e);
+                                }
+                                else if (b_selecao == 6)
+                                {
+                                    d3_Click(sender, e);
+                                }
+                                else
+                                {
+                                    d4_Click(sender, e);
+                                }
                                 break;
                             case 3:
-                                status.Text = tela_status;
+                                if (b_selecao == 0)
+                                {
+                                    upT_Click(sender, e);
+                                }
+                                else if (b_selecao == 1)
+                                {
+                                    up1_Click(sender, e);
+                                }
+                                else if (b_selecao == 2)
+                                {
+                                    button8_Click(sender, e);
+                                }
+                                else if (b_selecao == 3)
+                                {
+                                    up2_Click(sender, e);
+                                }
+                                else if (b_selecao == 4)
+                                {
+                                    d2_Click(sender, e);
+                                }
+                                else if (b_selecao == 5)
+                                {
+                                    status.Text = "3";
+                                    Log.Info("Andar: 3");
+                                }
+                                else if (b_selecao == 6)
+                                {
+                                    status.Text = "3";
+                                    Log.Info("Andar: 3");
+                                }
+                                else
+                                {
+                                    d4_Click(sender, e);
+                                }
                                 break;
                             case 4:
-                                status.Text = tela_status;
+                                if (b_selecao == 0)
+                                {
+                                    upT_Click(sender, e);
+                                }
+                                else if (b_selecao == 1)
+                                {
+                                    up1_Click(sender, e);
+                                }
+                                else if (b_selecao == 2)
+                                {
+                                    button8_Click(sender, e);
+                                }
+                                else if (b_selecao == 3)
+                                {
+                                    up2_Click(sender, e);
+                                }
+                                else if (b_selecao == 4)
+                                {
+                                    d2_Click(sender, e);
+                                }
+                                else if (b_selecao == 5)
+                                {
+                                    up3_Click(sender, e);
+                                }
+                                else if (b_selecao == 6)
+                                {
+                                    d3_Click(sender, e);
+                                }
+                                else
+                                {
+                                    Log.Info("Andar: 4");
+                                }
                                 break;
                         }
                     }
-                    */
+                    catch (Exception erro)
+                    {
+                        vexterno.Text = erro.Message;
+                    }
                 });
+
+                Thread.Sleep(1000);
             }
             else if (checkBox_at.Checked == false)
             {
                 this.Invoke((MethodInvoker)delegate ()
                 {
                     checkBox_ma.Checked = true;
-                    checkBox_ma_CheckedChanged(sender, e);
                 });
             }
-        }
-
-        private void changeMode(object sender, EventArgs e)
-        {
-            
         }
     }
 }
