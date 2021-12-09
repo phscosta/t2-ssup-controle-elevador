@@ -27,4 +27,8 @@ C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ss
 <<<<<<< HEAD
 =======
 C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2_ssup_controle_elevador.AutoControle.resources
+<<<<<<< HEAD
+>>>>>>> versao_2.0
+=======
+C:\Users\p_hen\Documents\t2-ssup-controle-elevador\obj\Debug\netcoreapp3.1\t2-ssup-controle-elevador.csproj.CopyComplete
 >>>>>>> versao_2.0

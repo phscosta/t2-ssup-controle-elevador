@@ -659,7 +659,7 @@ namespace t2_ssup_controle_elevador
                     }
                 });
 
-                Thread.Sleep(1000);
+                Thread.Sleep(3000);
             }
             else if (checkBox_at.Checked == false)
             {
